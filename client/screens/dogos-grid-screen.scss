@@ -1,0 +1,41 @@
+@import 'foundation';
+@import "../index";
+
+.dogos-container {
+  position: relative;
+  height: 100%;
+
+  &__spinner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @include xy-grid;
+
+  .dogos-item {
+    @include xy-cell();
+
+    @include breakpoint(medium) {
+      @include xy-cell(6);
+    }
+
+    @include breakpoint(large) {
+      @include xy-cell(3);
+    }
+  }
+
+  .dogos-no-favorites-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    button {
+      color: $mainDarkColor;
+      font-size: 1em;
+      font-weight: bold;
+    }
+  }
+}

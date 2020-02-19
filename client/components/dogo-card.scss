@@ -1,0 +1,50 @@
+@import 'foundation';
+@import "../index";
+
+@mixin dogo-card-action-button($background, $backgroundDark, $textColor){
+  width: 67%;
+  background: $background;
+  margin: 5px auto;
+  border-radius: 20px;
+  cursor: pointer;
+
+  $buttonTextSize: 1.4em;
+
+  &:hover{
+    background: $backgroundDark;
+  }
+
+  & > .icon {
+    font-size: $buttonTextSize;
+    color: $textColor;
+    padding: 7px;
+  }
+
+  & > .text {
+    font-size: $buttonTextSize;
+    color: $textColor;
+  }
+}
+
+.dogo-card {
+  position: relative;
+  padding: 5px;
+  margin: 5px;
+  border: 2px solid $actionDark;
+
+  .dogo-card-image {
+    width: 100%;
+  }
+
+  .dogo-card-like-button {
+    @include dogo-card-action-button($action, $actionDark, $mainLight);
+  }
+
+  .dogo-card-like-success {
+    @include dogo-card-action-button($success, $successDark, $mainDarkColor);
+  }
+
+  .dogo-card-dislike {
+    @include dogo-card-action-button($error, $errorDark, $mainLight);
+  }
+}

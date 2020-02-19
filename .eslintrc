@@ -1,0 +1,7 @@
+{
+  "globals": {
+    "BASE_FUNCTION_URL": true,
+    "FIREBASE_CONFIG": true,
+    "HOME_PAGE_DOGOS_NUMBER": true
+  }
+}

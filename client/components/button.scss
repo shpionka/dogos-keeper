@@ -1,0 +1,31 @@
+@import "../index";
+
+.dogo-button {
+  border: none;
+  border-radius: 25px;
+
+  &.default {
+    background-color: $action;
+
+    &:hover, &:focus, &:visited {
+      background: $actionDark;
+    }
+  }
+
+  &.success {
+    background-color: $success;
+
+    &:hover, &:focus, &:visited {
+      background: $successDark;
+    }
+  }
+
+  &.error {
+    background-color: $error;
+
+    &:hover, &:focus, &:visited {
+      background: $errorDark;
+    }
+  }
+
+}

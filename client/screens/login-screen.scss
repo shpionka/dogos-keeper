@@ -1,0 +1,20 @@
+@import "../index";
+
+.dogo-login-page {
+  position: relative;
+  height: 100%;
+
+  .dogo-login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    button {
+      color: $mainDarkColor;
+      font-size: 1em;
+      font-weight: bold;
+    }
+  }
+
+}
